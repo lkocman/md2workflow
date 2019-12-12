@@ -6,7 +6,8 @@ jobs:
         name: pytest
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v1
-            - uses: cclauss/GitHub-Action-for-pytest@0.5.0
-                with:
-                    args: pytest
+            - name: Run pytest
+              uses: actions/checkout@v1
+              uses: cclauss/GitHub-Action-for-pytest@0.5.0
+              with:
+                args: pytest
